@@ -1,2 +1,4 @@
 # Web-Application---nursing-home
 The web application I created uses HTML, CSS, JavaScript, jQuery, PHP and MySQL databases to create a powerful and user-friendly system for managing a nursing home.
+This app is a complex system for managing a nursing home. The interface is developed using HTML and CSS, providing a pleasant and intuitive look and feel to users.Using JavaScript and jQuery, I added interactive functionality to enhance the user experience.To manage the data, I used PHP to build the server side of the application. I created a robust MySQL database management system that stores information about residents, staff, activity schedules and other relevant details.
+The web application allows staff to record and update resident data, manage activity schedules. Users can also search and view information about residents, staff and more.
