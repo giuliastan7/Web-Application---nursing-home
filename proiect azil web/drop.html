@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamically Build Drop-downs</title>
+    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		form {
+			margin: 20px;
+			padding: 20px;
+			border: 2px solid #ccc;
+			border-radius: 10px;
+			background-color: #f9f9f9;
+		}
+		label {
+			display: inline-block;
+			width: 100px;
+			margin: 10px;
+		}
+		select {
+			display: inline-block;
+			margin: 10px;
+			padding: 5px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #fff;
+			font-size: 16px;
+		}
+		
+	</style>
+</head>
+<body>
+	<h2>Selectati locatia</h2>
+    <section class="header">
+        
+        <nav>
+        <a href="home.html"><img src="images/logo.jpg"></a>
+        <div class="nav-links">
+            <i class="fa fa-times" ></i>
+            <ul>
+                <li><a href="home.html">ACASA</a></li>
+                <li><a href="index.php">AUTENTIFICARE</a></li>
+                <li><a href="lkista2.html">ANGAJATI</a></li>
+                <li><a href="lista.html">TARIFE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            
+            
+            </ul>
+            
+        </div>
+            <i class="fa fa-bars" ></i>
+        </nav>
+	<form>
+		<label for="county">Judetul:</label>
+		<select id="county" name="county"></select>
+
+		<label for="city">Caminul:</label>
+		<select id="city" name="city"></select>
+
+		
+	</form>
+
+	<script>
+		$(document).ready(function(){
+			// Define the counties and cities in a JSON object
+			var countiesAndCities = {
+				"Cluj": ["Floresti", "Turda", "Gilau"],
+				"Iasi": ["Iasi-viitor", "Pacurari-viitor", "Tatarasi-viitor"],
+				"Timis": ["Timisoara-viitor", "Lugoj-viitor", "Sannicolau Mare-viitor"]
+			};
+
+			// Populate the County drop-down with options
+			$.each(countiesAndCities, function(county) {
+				$('#county').append($('<option>').text(county).attr('value', county));
+			});
+
+			// Populate the City drop-down when the County drop-down is changed
+			$('#county').change(function() {
+				var county = $(this).val();
+				var cities = countiesAndCities[county];
+				$('#city').empty();
+				$.each(cities, function(i, city) {
+					$('#city').append($('<option>').text(city).attr('value', city));
+				});
+			});
+		});
+	</script>
+</body>
+</html>

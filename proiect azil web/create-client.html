@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adaugati un batranel</title>
+	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+	<style>
+		body {
+            background-image: url('happy.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+			font-family: Arial, sans-serif;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+
+		input {
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			font-size: 16px;
+		}
+
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: #fff;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		input[type=submit]:hover {
+			background-color: #3e8e41;
+		}
+		
+	</style>
+</head>
+<body>
+	<section class="header">
+        
+        <nav>
+        <a href="home.html"><img src="images/logo.jpg"></a>
+        <div class="nav-links">
+            <i class="fa fa-times" ></i>
+            <ul>
+                <li><a href="home.html">ACASA</a></li>
+                <li><a href="index.php">AUTENTIFICARE</a></li>
+                <li><a href="lkista2.html">ANGAJATI</a></li>
+                <li><a href="lista.html">TARIFE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            
+            
+            </ul>
+            
+        </div>
+            <i class="fa fa-bars" ></i>
+        </nav>
+		<h1>Adaugati un varstnic</h1>
+	<form action="create-client.php" method="post">
+		<label for="name">Nume:</label>
+		<input type="text" name="name" required>
+
+		<label for="email">Email:</label>
+		<input type="email" name="email" required>
+
+		<label for="phone">Numar de telefon:</label>
+		<input type="tel" name="phone" required>
+
+		<input type="submit" value="Create">
+	</form>
+</body>
+</html>

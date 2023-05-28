@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nested List Example</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+  
+   <style>
+    ul {
+        list-style: none;
+        color:lightsalmon;
+
+    }
+    
+    ul li {
+        padding-left: 20px;
+    }
+    
+    ul ul {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 30px;
+        color:azure;
+    }
+    
+    ul ul li {
+        padding-left: 5px;
+    }
+    h1{
+        color:peachpuff;
+    }
+    .imagine {
+    text-align: center;
+}
+.imagine img {
+    width: 50%;
+    max-width: 400px;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.popup-content img {
+  width: 200px;
+  height: auto;
+}
+
+.close-btn {
+  background-color: lightgrey;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.close-popup:hover {
+  background-color: #ff6666;
+}
+ 
+    	
+</style>
+
+    
+</head>
+<body>
+    <section class="header">
+        
+        <nav>
+        <a href="home.html"><img src="images/logo.jpg"></a>
+        <div class="nav-links">
+            <i class="fa fa-times" ></i>
+            <ul>
+                <li><a href="home.html">ACASA</a></li>
+                <li><a href="index.php">AUTENTIFICARE</a></li>
+                <li><a href="lkista2.html">ANGAJATI</a></li>
+                <li><a href="lista.html">TARIFE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            
+            
+            </ul>
+            
+        </div>
+            <i class="fa fa-bars" ></i>
+        </nav>
+	<h1>Contracte cu firme</h1>
+	<ul>
+		<li>Alimentatie</li>
+		<ul>
+			<li>Mancare gatita</li>
+			<ul>
+				<li>Marty</li>
+				<li>KFC</li>
+				<li>La Casa</li>
+			</ul>
+			<li>Lactate</li>
+			<ul>
+				<li>Napolact</li>
+				
+			</ul>
+			<li>Carne</li>
+			<ul>
+				<li>Ferma Floresti</li>
+			</ul>
+		</ul>
+		<li>Servicii </li>
+		<ul>
+			<li>Medicale</li>
+			<ul>
+				<li>Spitalul Clinic Judetean</li>
+				<li>Polaris</li>
+				<li>OLGAMED</li>
+			</ul>
+			<li>Curatenie</li>
+			<ul>
+				<li>Clean SRL</li>
+				
+			</ul>
+		</ul>
+	</ul>
+
+
+    <div class="imagine">
+        <img src="images/diploma.png" class="popup-trigger">
+        <h3>Acreditari</h3>
+      </div>
+      
+      <div class="popup">
+        <div class="popup-content">
+          <img src="images/diploma.png">
+          <h3>Diploma de acreditari</h3>
+          <p>certificatul de înregistrare eliberat de Oficiul Național al Registrului Comerțului (copie)
+            certificatul constatator eliberat de Oficiul Național al Registrului Comerțului (copie)
+            angajamentul privind respectarea obligației prevăzute la art.10 alin.(3) din Legea nr.197/2012 cu modificările ulterioare (original)</p>
+          <button class="close-btn">Close</button>
+        </div>
+      </div>
+      <script>
+        $(document).ready(function() {
+  // When the image is clicked, show the popup
+  $(".popup-trigger").click(function() {
+    $(".popup").show();
+  });
+
+  // When the close button is clicked, hide the popup
+  $(".close-btn").click(function() {
+    $(".popup").hide();
+  });
+});
+     
+    </script>
+    
+    
+   
+
+  
+    <footer>
+        <p>&copy; 2023 My Company, Inc. All rights reserved.</p>
+      </footer>
+</body>
+</html>

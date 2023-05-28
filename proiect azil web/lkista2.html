@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search si sort tabel</title>
+      <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Search functionality
+        $("#search-input").on("keyup", function() {
+          var keyword = $(this).val().toLowerCase();
+          $("table tbody tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(keyword) > -1);
+          });
+        });
+
+        // Sorting functionality
+        $("table thead th").on("click", function() {
+          var column = $(this).index();
+          var order = $(this).hasClass("asc") ? "desc" : "asc";
+          $(this).siblings().removeClass("asc desc");
+          $(this).addClass(order);
+          var rows = $("table tbody tr").get();
+          rows.sort(function(a, b) {
+            var A = $(a).children("td").eq(column).text().toUpperCase();
+            var B = $(b).children("td").eq(column).text().toUpperCase();
+            if (A < B) {
+              return order === "asc" ? -1 : 1;
+            }
+            if (A > B) {
+              return order === "asc" ? 1 : -1;
+            }
+            return 0;
+          });
+          $.each(rows, function(index, row) {
+            $("table tbody").append(row);
+          });
+        });
+      });
+    </script>
+    <style>
+        /* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/happy.jpg);
+  padding: 20px;
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+    color: #ffff;
+}
+
+/* Search input styles */
+#search-input {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  width: 70%;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header styles */
+th {
+  background-color: #f2f2f2;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+}
+          table tbody {
+    border: 20px solid darkseagreen;
+  }
+
+th:hover {
+  background-color: #e2e2e2;
+}
+
+/* Table body styles */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+/* Ascending and descending arrow styles */
+.asc:after,
+.desc:after {
+  content: "▾";
+  margin-left: 5px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.desc:after {
+  content: "▴";
+}
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #ddd;
+        cursor: pointer;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .asc:after {
+        content: " ▲";
+      }
+      .desc:after {
+        content: " ▼";
+      }
+      html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 80%;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #ddd;
+  padding: 10px;
+}
+    
+    </style>
+      
+  </head>
+  <body>
+       <nav>
+        <a href="index.html"><img src="images/logo.jpg"></a>
+        <div class="nav-links">
+            <i class="fa fa-times" ></i>
+            <ul>
+                <li><a href="home.html">ACASA</a></li>
+                <li><a href="index.php">AUTENTIFICARE</a></li>
+                <li><a href="lkista2.html">ANGAJATI</a></li>
+                <li><a href="lista.html">TARIFE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            
+            
+            </ul>
+            
+        </div>
+      
+    <h1>Lista angajatilor caminului</h1>
+    <input type="text" id="search-input" placeholder="Search...">
+    <table>
+      <thead>
+        <tr>
+          <th>Nume</th>
+          <th>Functie</th>
+          <th>Locatie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>infirmier</td>
+          <td>Gilau</td>
+        </tr>
+        <tr>
+          <td>Tony</td>
+          <td>infirmier</td>
+          <td>Gilau</td>
+        </tr>
+        <tr>
+          <td>Marius</td>
+          <td>asistent medical</td>
+          <td>Floresti</td>
+        </tr>
+        <tr>
+          <td>Maria</td>
+          <td>asistent medical</td>
+          <td>Gilau</td>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>paznic</td>
+          <td>floresti</td>
+        </tr>
+        <tr>
+          <td>Sarah</td>
+          <td>kinetoterapeut</td>
+          <td>Floresti</td>
+        </tr>
+        <tr>
+          <td>David</td>
+          <td>asistent social</td>
+          <td>Turda</td>
+        </tr>
+        <tr>
+          <td>Mircea</td>
+          <td>infirmier</td>
+          <td>Floresti</td>
+        </tr>
+        <tr>
+          <td>Ecaterina</td>
+          <td>infirmier</td>
+          <td>Gilau</td>
+        </tr>
+        <tr>
+          <td>Mariana</td>
+          <td>director</td>
+          <td>Gilau</td>
+        </tr>
+        <tr>
+          <td>Radu</td>
+          <td>psiholog</td>
+          <td>Floresti</td>
+        </tr>
+        <tr>
+          <td>Robert</td>
+          <td>psiholog</td>
+          <td>Gilau</td>
+        </tr>
+        <tr>
+          <td>Jackueline</td>
+          <td>infirmier</td>
+          <td>Turda</td>
+        </tr>
+      </tbody>
+    </table>
+    
+      <p>&copy; 2023 My Company, Inc. All rights reserved.</p>
+    
+  
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminul pentru varstnici : Bunicii Fericiti </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="header">
+        
+            <nav>
+            <a href="home.html"><img src="images/logo.jpg"></a>
+            <div class="nav-links">
+                <i class="fa fa-times" ></i>
+                <ul>
+                    <li><a href="home.html">ACASA</a></li>
+                    <li><a href="index.php">AUTENTIFICARE</a></li>
+                    <li><a href="lkista2.html">ANGAJATI</a></li>
+                    <li><a href="lista.html">TARIFE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                
+                
+                </ul>
+                
+            </div>
+                <i class="fa fa-bars" ></i>
+            </nav>
+            
+           
+            <section class="locatie">
+                <h1>  Caminul pentru varstnici : Bunicii Fericiti </h1>
+                <p>Ai grijă de cei dragi și oferă-le o bătrânețe liniștită într-un mediu călduros!
+                    <a href="index.php" class="hero-btn"> Alăturați-vă nouă pentru mai multe informatii</a>
+
+                </p>
+                <p>Locatiile noastre</p>
+            
+                <div class="row">
+                    <div class="locatie-col">
+                        <img src="images/locatie.png">
+                        <div class="layer">
+                            <h3>FLORESTI</h3>
+                        </div>
+                    </div>
+                    <div class="locatie-col">
+                        <img src="images/floresti.png">
+                        <div class="layer">
+                            <h3>TURDA</h3>
+                        </div>
+                    </div>
+                    <div class="locatie-col">
+                        <img src="images/lac.png">
+                        <div class="layer">
+                            <h3>GILAU</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+
+        
+    
+   
+    
+    
+    
+    
+    
+    
+    <section class="facilitati">
+        <h1>Facilitati</h1>
+        <p>Rezidenții noștri se simt minunat pentru că locatiile sunt gândite, proiectate și construite având ca scop principal starea de bine a acestora.</p>
+        <div class="row">
+            <div class="facilities-col">
+                <img src="images/dormitor.png">
+                <h3>Conditii de lux</h3>
+                <p>Rezidențele sunt intime,clienții pot alege să se cazeze 2 persoane într-un apartament pentru că ”vor să fie cu încă cineva” sau singuri in camera, asigurând astfel intimitatea mult apreciată de acasă.</p>
+            
+            </div> 
+            
+            <div class="facilities-col">
+                <img src="images/mese.png">
+                <h3>Sala de mese</h3>
+                <p>Meniul zilnic este adaptat seniorilor, elaborat de un medic specialist dietetician și este adaptat fiecărui rezident, în funcție de restricțiile și recomandările medicale aferente</p>
+            
+            </div> 
+            
+            <div class="facilities-col">
+                <img src="images/curat.png">
+                <h3>Curatenie exemplara</h3>
+                <p>Curățenia este intretinuta, procedurile noastre de curățenie asigură curățarea zilnică a camerelor, băilor și spațiilor comune ale comunității pentru un confort maxim al rezidenților și familiilor acestora.</p>
+            
+            </div> 
+        
+        
+        </div>
+    
+    
+    
+    
+    
+    
+    </section>
+
+    <script>
+        const navSlide = () => {
+          const burger = document.querySelector('.fa-bars');
+          const close = document.querySelector('.fa-times');
+          const nav = document.querySelector('.nav-links');
+      
+          burger.addEventListener('click', () => {
+            nav.classList.add('nav-active');
+            burger.style.display = 'none';
+            close.style.display = 'block';
+          });
+      
+          close.addEventListener('click', () => {
+            nav.classList.remove('nav-active');
+            close.style.display = 'none';
+            burger.style.display = 'block';
+          });
+        };
+      
+        navSlide();
+      </script>
+      
+      
+      
+      
+      
+      
+      
+      
+    
+   
+    
+    
+
+      <footer>
+		<p>&copy; 2023 My Company, Inc. All rights reserved.</p>
+	</footer>
+
+</body>
+</html>

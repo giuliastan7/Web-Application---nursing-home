@@ -1,0 +1,52 @@
+/* stilizarea elementului <body> */
+body {
+ margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* stilizarea elementului <h1> */
+h1 {
+text-align: center;
+  margin-top: 50px;
+  font-size: 2em;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 1px #ccc;
+}
+
+/* stilizarea elementului <ul> */
+#list-items {
+    list-style: none;
+  padding: 0;
+  margin: 50px auto;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #ccc;
+  background-color: #fff;
+}
+
+#list-items li:nth-child(-n+2) {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* stilizarea elementului <li> */
+#list-items li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* stilizarea butonului "View more" */
+#view-more {
+  display: block;
+  margin: 0 auto;
+}
+
+/* stilizarea butonului "View more" la survolul mouse-ului */
+#view-more:hover {
+  background-color: #2980b9;
+}

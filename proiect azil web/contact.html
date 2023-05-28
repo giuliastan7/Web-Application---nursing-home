@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nested Table Example</title>
+    <link rel="stylesheet" href="style.css">
+	<style>
+		table {
+			border-collapse: collapse;
+			margin: 20px;
+            background-color: #f2f2f2;
+		}
+		table td {
+			padding: 10px;
+			border: 1px solid black;
+		}
+		table th {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			border: 1px solid black;
+		}
+		table table {
+			border: 1px solid black;
+			margin: 10px;
+			background-color: #f2f2f2;
+		}
+		table table td {
+			padding: 5px;
+			border: 1px solid black;
+		}
+        .contracts-button {
+    border-radius: 0.1px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px; /* reduced padding */
+    border: none;
+    cursor: pointer;
+    font-size: 14px; /* reduced font size */
+}
+    footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0.6px; /* adjust the height as needed */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+       
+	</style>
+</head>
+<section class="header">
+        
+    <nav>
+    <a href="home.html"><img src="images/logo.jpg"></a>
+    <div class="nav-links">
+        <i class="fa fa-times" ></i>
+        <ul>
+            <li><a href="home.html">ACASA</a></li>
+            <li><a href="index.php">AUTENTIFICARE</a></li>
+            <li><a href="lkista2.html">ANGAJATI</a></li>
+            <li><a href="lista.html">TARIFE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        
+        
+        </ul>
+        
+    </div>
+        <i class="fa fa-bars" ></i>
+    </nav>
+<body>
+   
+	<table>
+		<tr>
+			<th>Nume</th>
+			<th>Functie</th>
+			<th>Numar de telefon</th>
+			<th>Alte informatii</th>
+		</tr>
+		<tr>
+			<td>Stan Giulia Ecaterina</td>
+			<td>Proprietar - Turda + Gilau</td>
+			<td>0746081327</td>
+			<td>
+				<table>
+					<tr>
+						<th>Adresa</th>
+						<th>Varsta</th>
+						<th>Cod postal</th>
+						<th>Motto</th>
+					</tr>
+					<tr>
+						<td>str.Aleea Baisoara nr 6</td>
+						<td>21</td>
+						<td>400445</td>
+						<td>,,Be the change wou want to see in the world".</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>Alexandra Stan</td>
+			<td>Proprietar - Floresti</td>
+			<td>0744478265</td>
+			<td>
+				<table>
+					<tr>
+						<th>Adresa</th>
+						<th>Varsta</th>
+						<th>Cod postal</th>
+						<th>Motto</th>
+					</tr>
+					<tr>
+						<td>str. Aleea Scarisoara nr 4 ap 33</td>
+						<td>52</td>
+						<td>5400455</td>
+						<td>,,Smile everyday''.</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+    
+    <button type="button" class="contracts-button" onclick="location.href='nested.html'">Contracte cu firme partenere</button>
+	<button type="button" class="contracts-button" onclick="location.href='drop.html'">Locatii si proiecte viitoare</button>
+    <footer>
+        <p>&copy; 2023 My Company, Inc. All rights reserved.</p>
+      </footer>
+</body>
+</html>

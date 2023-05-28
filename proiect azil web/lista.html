@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tarife  </title>
+      <link rel="stylesheet" href="lista.css">
+      <link rel="stylesheet" href="style.css">
+       <section class="header">
+        <footer>
+          <p>&copy; 2023 My Company, Inc. All rights reserved.</p>
+        </footer>
+      <nav>
+        <a href="index.html"><img src="images/logo.jpg"></a>
+        <div class="nav-links">
+          <i class="fa fa-times"></i>
+          <ul>
+            <li><a href="">ACASA</a></li>
+            <li><a href="index.php">AUTENTIFICARE</a></li>
+            <li><a href="lkista2.html">ANGAJATI</a></li>
+            <li><a href="lista.html">TARIFE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars"></i>
+      </nav>
+           <p>
+            Tarifele unui cămin pentru vârstnici pot fi descrise astfel:
+            
+            Cost lunar: Tarifele sunt calculate în funcție de costul lunar al serviciilor oferite de cămin, cum ar fi cazarea, îngrijirea medicală, alimentația, curățenia, întreținerea și activitățile sociale. Tarifele pot varia în funcție de tipul camerei (individuală sau dublă) și nivelul de îngrijire necesar.
+            
+            Taxe suplimentare: În afară de costul lunar, un cămin pentru vârstnici poate percepe taxe suplimentare pentru anumite servicii sau facilități, cum ar fi serviciul de spălătorie sau de curățenie chimică, accesul la anumite activități sociale, parcare, servicii medicale suplimentare sau vizite în afara orelor de vizitare.
+            
+            Depozit de garanție: Unele camine pentru vârstnici pot solicita un depozit de garanție, care este o sumă de bani plătită în avans, pentru a acoperi eventualele costuri de reparații sau alte daune cauzate de rezidenți.
+            
+            
+            
+            Opțiuni de plată: Majoritatea caminelor pentru vârstnici permit o varietate de opțiuni de plată, cum ar fi plata lunară, plata trimestrială sau plata anuală. De asemenea, pot oferi reduceri pentru plăți efectuate în avans sau pentru abonamente pe termen lung.
+            Este important să verificați cu atenție toate detaliile legate de costurile implicate într-un cămin pentru vârstnici și să discutați cu personalul caminului despre opțiunile de plată și eventualele reduceri disponibile. De asemenea, asigurați-vă că înțelegeți în totalitate contractul 
+            și politica de anulare a caminului înainte de a semna orice document.</p>
+    
+               
+          </section>
+      
+      
+    <style>
+         body {
+      background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/happy.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+      #list-items li:nth-child(n+3) {
+        display: none;
+      }
+      #view-more {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px; /* adjust the height as needed */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+    </style>
+  </head>
+  <body>
+       
+    <h1>Tarifele noastre</h1>
+    <ul id="list-items">
+      <li>Cazare full - Gilau : 4000 lei/luna</li>
+      <li>Cazare full - Floresti : 4200 lei/luna</li>
+      <li>Cazare full - Turda : 5000 lei/luna</li>
+      <li>Cazare Gilau(fara servicii medicale): 3000 lei/luna</li>
+      <li>Cazare Turda(fara servicii medicale): 4000 lei/luna</li>
+      <li>Cazare Floresti(fara servicii medicale): 3500 lei/luna</li>
+    
+    </ul>
+    <button id="view-more">View more</button>
+  
+    <script>
+      document.getElementById("view-more").addEventListener("click", function() {
+        var items = document.querySelectorAll("#list-items li:nth-child(n+3)");
+        for (var i = 0; i < items.length; i++) {
+          items[i].style.display = "list-item";
+        }
+        document.getElementById("view-more").style.display = "none";
+      });
+    </script>
+    
+  
+  </body>
+</html>
